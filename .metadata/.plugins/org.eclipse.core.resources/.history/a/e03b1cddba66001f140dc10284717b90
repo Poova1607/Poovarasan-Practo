@@ -1,0 +1,6 @@
+Feature: Home page
+Scenario: Click to Surgeries pic
+Given I am on Home Page
+Then I click to Surgeries pic
+Scenario: practoHome page
+Then I click to Book test& checkups

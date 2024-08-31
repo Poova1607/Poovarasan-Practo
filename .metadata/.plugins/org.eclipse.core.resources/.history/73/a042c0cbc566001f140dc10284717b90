@@ -1,0 +1,10 @@
+Feature: Home page
+Scenario: Click to Surgeries pic
+Given I am on Home Page
+Then I click to Surgeries pic
+Scenario: Click Book tests& checkups
+Then I Click to Book tests& checkups
+Scenario Outline: Select the city and Search tests
+When: I Select the <"<city>"> city 
+And: I Search the <"<tests>"> tests and Enter the key
+

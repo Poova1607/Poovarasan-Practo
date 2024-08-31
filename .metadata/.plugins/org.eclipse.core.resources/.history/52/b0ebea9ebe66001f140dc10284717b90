@@ -1,0 +1,38 @@
+package proctoStepDefinition;
+
+import javax.xml.datatype.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.When;
+
+public class Suregeries {
+	static public WebDriver driver;
+	@Given("I am on Home Page")
+	public void i_am_on_home_page() {
+		driver = new ChromeDriver();
+		driver.get("https://www.practo.com");
+		driver.manage().window().maximize(); 
+	}
+
+	@Then("I click to Surgeries pic")
+	public void i_click_to_surgeries_pic() {
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div/div/div/div/div[3]/div/a")).click();
+		
+	}
+@Then("I Click to Book tests& checkups")
+public void i_click_to_book_tests_checkups() {
+	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	    WebElement surgeriesPic = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='Surgeries']")));
+	    surgeriesPic.click();
+	driver.findElement(By.xpath("//a[@event='Nav:Interacted:Book diagnostic tests'][contains(text(),'Book tests')]")).click();
+}
+}

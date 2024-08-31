@@ -1,0 +1,9 @@
+package proctoPages;
+
+public class Homepage {
+	WebDriver driver;
+	public Homepage (WebDriver driver) {
+		this.driver=driver;
+	}
+
+}

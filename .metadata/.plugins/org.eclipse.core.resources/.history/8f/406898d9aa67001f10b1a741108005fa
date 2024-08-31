@@ -1,0 +1,34 @@
+Feature: Home page
+Scenario: Click to Surgeries pic
+Given I am on Home Page
+Then I click to Surgeries pic
+
+Scenario: Click Book tests& checkups
+Then I Click to Book tests& checkups
+
+Scenario Outline: Select the city and Search tests
+When: I Select the city as <"<city>"> 
+And: I Search the  tests as <"<tests>"> and Enter the key
+And: If I find the tests and the city click on Book Now.
+
+Examples:
+     |city|
+     
+
+Scenario Outline: Select the Top Booked Diagnostic Tests in the list of the tests
+When: I click the Add 
+Then: I click the Proceed to Checkout
+
+Scenario: Add the Patient Details
+When: Enter the Valid Patient Name
+And: Enter the Valid Number 
+And: Click the Radio Button
+And: Enter the Valid Mobile Number
+And: Enter the Valid Email-Id
+Then: I click the Continue
+
+
+
+
+
+

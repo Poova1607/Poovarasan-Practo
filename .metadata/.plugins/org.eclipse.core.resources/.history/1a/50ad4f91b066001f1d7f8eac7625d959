@@ -1,0 +1,4 @@
+Feature: Click to Surgeries
+Scenario: Click to Surgeries pic
+Given I am on Home Page
+When I click to Surgeries pic

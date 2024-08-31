@@ -1,0 +1,9 @@
+package proctoTestRunner;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="features",
+glue="stepdefinition",
+
+public class practorunner {
+
+}

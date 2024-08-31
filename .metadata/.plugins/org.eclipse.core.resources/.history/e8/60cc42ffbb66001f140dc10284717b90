@@ -1,0 +1,41 @@
+package proctoStepDefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.When;
+
+public class Suregeries {
+	static public WebDriver driver;
+	@Given("I am on Home Page")
+	public void i_am_on_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		driver = new ChromeDriver();
+		driver.get("https://www.practo.com");
+		driver.manage().window().maximize(); 
+	}
+
+	@Then("I click to Surgeries pic")
+	public void i_click_to_surgeries_pic() {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+		driver.findElement(By.xpath("/html/body/div/div/div/div[3]/div/div/div/div/div[3]/div/a")).click();
+		
+	}
+@Then("I Click to Book tests& checkups")
+public void i_click_to_book_tests_checkups() {
+    // Write code here that turns the phrase above into concrete actions
+   // throw new io.cucumber.java.PendingException();
+	driver.findElement(By.xpath("/html/body/div/main/div/div[1]/div/div[2]/div/div/div[4]/a")).click();
+}
+}
+//	@Then("I click to Book tests& checkups")
+//	public void i_lick_to_book_test_checkups() {
+//		driver.findElement(By.xpath("/html/body/div/main/div/div[1]/div/div[2]/div/div/div[4]")).click();
+//				}
+//}
